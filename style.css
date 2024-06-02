@@ -1,0 +1,380 @@
+/**** Reset ****/
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**** Style général de la page ****/
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(
+        -225deg,
+        #3d4e81 0%,
+        #5753c9 48%,
+        #6e7ff3 100%
+    );
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+h1, footer span {
+    text-align: center;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.main__content {
+    flex-grow: 1;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 250px)
+}
+
+.emoji__box {
+    margin: 30px;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emoji__ext {
+    width: 100%;
+    height: 100%;
+    border: 12px solid #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emoji__int {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #ffc83d;
+    position: relative;
+}
+
+.eyebrows__box {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 20px;
+    width: 72%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.eyes__box {
+    z-index: 20;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 15px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mouth {
+    z-index: 10;
+    background-color: #000000;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    overflow: hidden;
+    width: 100px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**** Emoji 1 ****/
+
+.eyes1 {
+    height: 100%;
+    width: 21px;
+    background: #000000;
+    position: relative;
+    margin: 0 10px;
+}
+.eyes1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 21px;
+    width: 21px;
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+.eyes1::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 21px;
+    width: 21px;
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+.mouth__demiCircle {
+    height: 50px;
+    border-radius: 0 0 50px 50px;
+    border-top: 6px solid #000000;
+    border-left: 8px solid #000000;
+    border-right: 8px solid #000000;
+    border-bottom: 10px solid #000000;
+}
+
+.mouth1--teeth {
+    position: absolute;
+    top: 0;
+    height: 12px;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.mouth1--tongue {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 30px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: #f03a17;
+    transform: translate(-50%, -40%);
+}
+
+/**** Emoji 2 ****/
+
+.eyes2 {
+    width: 40px;
+    height: 20px;
+    border-radius: 30px 30px 0 0;
+    background-color: #000000;
+    position: relative;
+}
+
+.eyes2::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 23px;
+    border-radius: 23px 23px 0 0;
+    background-color: #ffc83d;
+}
+
+.mouth2--teeth {
+    height: 100%;
+    width: 200px;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(5, 15px);
+    grid-template-rows: 12px 40px;
+    gap: 5px;
+}
+
+.mouth2-tooth {
+    z-index: 2;
+    background-color: #ffffff;
+}
+
+/**** Emoji 3 ****/
+
+.eyebrow1 {
+    background-color: #d48c00;
+    width: 45px;
+    height: 10px;
+    border-radius: 30px;
+}
+
+.eyebrow1--left {
+    transform: rotate(-22deg);
+}
+
+.eyebrow1--right {
+    transform: rotate(22deg);
+}
+
+.eyes3 {
+    width: 40px;
+    height: 15px;
+    border-radius: 30px 30px 0 0;
+    background-color: black;
+    position: relative;
+}
+
+.eyes3::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 30px;
+    height: 13px;
+    border-radius: 23px 23px 0 0;
+    background-color: #ffc83d;
+    transform: translate(-50%, -50%);
+}
+
+.drop {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: 100%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color: #00bcf2;
+}
+
+.drop__left {
+    left: -55px;
+    border-top-left-radius: 50%;
+}
+
+.drop__right {
+    right: -55px;
+
+    border-top-right-radius: 50%;
+}
+
+/**** Emoji 4 ****/
+
+.mouth--neutral {
+    height: 15px;
+    border-radius: 30px;
+    width: 55px;
+    top: 70%;
+}
+
+.eyes4 {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(-20px);
+}
+
+.eyes4::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: 5px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #000000;
+}
+
+/**** Emoji 5 ****/
+
+.tongue {
+    position: absolute;
+    top: calc(60% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    background-color: #f03a17;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.tongue--rainure {
+    width: 6px;
+    height: 45px;
+    background-color: #be3300;
+    transform: translateY(1px);
+}
+
+/**** Emoji 6 ****/
+
+.eyes5 {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(-20px);
+}
+
+.eyes5::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #000000;
+}
+
+/**** Emoji 7 ****/
+
+.mouth--smile {
+    height: 100px;
+    width: 150px;
+    background-color: transparent;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #000;
+    border-radius: 50%;
+    transform: translate(-50%, -60%);
+}
+
+/**** Emoji 8 ****/
+
+.mouth--sad {
+    height: 100px;
+    width: 150px;
+    background-color: transparent;
+    border: 10px solid transparent;
+    border-top: 10px solid #000000;
+    border-radius: 50%;
+    transform: translate(-50%, 10%);
+}
+
+.eyes3.inverse {
+    transform: rotate(180deg) translateY(-10px);
+}
+
+footer span {
+    font-size: 18px;
+}
